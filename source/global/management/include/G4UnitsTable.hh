@@ -55,7 +55,7 @@ class G4UnitDefinition;
 class G4UnitsTable : public std::vector<G4UnitsCategory*>
 {
  public:
-  using std::vector<G4UnitsCategory*>::vector;
+  //using std::vector<G4UnitsCategory*>::vector;
   G4UnitsTable();
   ~G4UnitsTable();
 
