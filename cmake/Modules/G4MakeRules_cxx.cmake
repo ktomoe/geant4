@@ -108,6 +108,18 @@ endif()
 
 
 #-----------------------------------------------------------------------
+# Intel C++ Compilers - all (?) platforms
+
+if(CMAKE_CXX_COMPILER_ID MATCHES "Fujitsu")
+
+  set(CMAKE_CXX_FLAGS_RELEASE_INIT "-O3 -DNDEBUG")
+
+  # - Multithreading
+  __configure_tls_models()
+  set(GEANT4_MULTITHREADED_CXX_FLAGS "-pthread")
+endif()
+
+#-----------------------------------------------------------------------
 # Ye Olde *NIX/Compiler Systems
 # NB: *NOT* Supported... Only provided as legacy.
 # None are tested...
